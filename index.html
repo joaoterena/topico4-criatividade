@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Bibliométrico Exaustivo: O Pensamento Criativo no Contexto Educativo (2016-2020)</title>
+    <!-- Fontes do Google: Montserrat e Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;       /* Azul escuro institucional */
+            --secondary-color: #3b82f6;     /* Azul de destaque */
+            --accent-color: #d97706;        /* Dourado para detalhes e bordas */
+            --bg-light: #f8fafc;            /* Fundo principal claro */
+            --card-bg: #ffffff;             /* Fundo dos cards e tabelas */
+            --text-color: #334155;          /* Texto principal */
+            --text-heading: #0f172a;       /* Títulos principais */
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, var(--primary-color) 100%);
+            color: #ffffff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-heading);
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        blockquote {
+            background-color: #f1f5f9;
+            border-left: 4px solid var(--accent-color);
+            padding: 0.8rem 1.2rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        /* Estilização de Tabelas */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+        }
+
+        th, td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Estilização da Seção de Mídias */
+        .media-section {
+            background: #ffffff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .media-item {
+            background-color: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .media-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .media-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .media-item audio, .media-item video {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer strong {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            section, .media-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Relatório Bibliométrico Exaustivo: O Pensamento Criativo no Contexto Educativo (2016-2020)</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- 1. Introdução e Contextualização -->
+        <section>
+            <h2>1. Introdução e Contextualização do Problema</h2>
+            <p>O pensamento criativo consolidou-se como um dos pilares fundamentais da educação contemporânea, transcendendo a mera expressão artística para se tornar uma competência essencial na resolução de problemas e na adaptação a um mundo em constante transformação. No cenário educativo moderno, a atuação docente é redefinida; o professor deixa de ser um mero transmissor de informações para assumir o papel de guia do potencial latente do discente. Conforme postulado por Sivera (2016), o docente assume a função de <em>"quem ajudará a sacar o gênio criativo que os estudantes levam dentro"</em>, reconhecendo a singularidade da psique humana no processamento da realidade.</p>
+            <p>Apesar da sua importância reconhecida, a potencialização do pensamento criativo enfrenta desafios práticos no cotidiano escolar, onde muitas vezes se espera uma resposta padronizada dos alunos. Diante dessa dicotomia entre a necessidade de inovação e as estruturas tradicionais, este relatório busca responder à seguinte pergunta fundamental de pesquisa: <strong>"Qual é o avanço científico do pensamento criativo no contexto educativo durante o período de 2016 a 2020?"</strong>. Através de uma análise bibliométrica rigorosa, este documento detalha a produção acadêmica recente, as tendências temáticas e os aportes teóricos que sustentam a criatividade como faculdade humana indispensável.</p>
+        </section>
+
+        <!-- 2. Fundamentação Teórica -->
+        <section>
+            <h2>2. Fundamentação Teórica e Epistemológica</h2>
+            
+            <h3>2.1 Etimologia dos Conceitos Centrais</h3>
+            <p>A compreensão profunda do pensamento criativo exige o retorno às raízes linguísticas que definem seus componentes, conforme explorado por autores como Gómez de Silva (1998) e Navarro (2004):</p>
+            <ul>
+                <li><strong>Criatividade:</strong> Originada do latim <em>creare</em>, remete ao ato de produzir algo novo, singular ou raro. Historicamente, sua aplicação migrou da psicologia para áreas como a pedagogia e a gestão organizacional.</li>
+                <li><strong>Educação:</strong> Este conceito é derivado de duas perspectivas latinas que fundamentam filosofias pedagógicas distintas:
+                    <ul>
+                        <li><strong>Educare:</strong> Refere-se ao processo externo de dirigir, orientar e conduzir o indivíduo de fora para dentro.</li>
+                        <li><strong>Educere:</strong> Significa "sacar afuera" (extrair/sacar para fora). Esta raiz fundamenta a pedagogia da expressão, onde o foco é dar a conhecer as próprias experiências e exteriorizar o potencial latente do educando.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>2.2 Bases do Pensamento e Linguagem (Autores Clássicos)</h3>
+            <p>A estrutura do pensamento foi explorada por teóricos que estabeleceram as bases para o desenvolvimento cognitivo e criativo:</p>
+            <p><strong>Ferrater Mora (1964):</strong> Define o pensamento como uma <em>"entidade atemporal e inespacial, invariável"</em>, estabelecendo uma distinção ontológica entre o ato psicofísico de pensar e a estrutura universal do pensamento em si.</p>
+            <p><strong>Vygotsky (1934) e Piaget (1969):</strong> Estes autores enfatizam a relação intrínseca entre pensamento e linguagem. Para Vygotsky, o pensamento sem a palavra é de difícil exteriorização, enquanto Piaget sublinha que a compreensão da estrutura cognitiva do estudante é pré-requisito para que o pensamento se torne uma ferramenta eficaz de intervenção na realidade.</p>
+
+            <h3>2.3 O Pensamento Criativo segundo De Bono e Outros</h3>
+            <p>Edward De Bono (1994) é uma referência crucial ao tratar o pensamento criativo como uma ferramenta prática e deliberada. Para ele, a criatividade consiste no ato de pensar de maneira imaginativa para interpretar reflexivamente a realidade. Complementarmente, Galvis (2007) e Sonia (2018) reforçam que o pensamento criativo é o instrumento essencial para a interpretação reflexiva da realidade e a solução de problemas complexos, permitindo a geração de múltiplas alternativas diante dos desafios socioculturais.</p>
+        </section>
+
+        <!-- 3. Metodologia -->
+        <section>
+            <h2>3. Metodologia da Investigação Bibliométrica</h2>
+            
+            <h3>3.1 Design e Escopo</h3>
+            <p>A investigação adotou uma abordagem <strong>quantitativa e retrospectiva</strong>, utilizando um design bibliométrico para medir e analisar a produção científica. Um diferencial metodológico foi a consulta prévia a <strong>Tesauros da UNESCO</strong> para a identificação de sinônimos e termos controlados, garantindo a precisão terminológica. As bases de dados consultadas foram:</p>
+            <ul>
+                <li>Scopus</li>
+                <li>EBSCO (Elton B. Stephens Company)</li>
+                <li>Academic OneFile</li>
+                <li>SciELO (Scientific Electronic Library Online)</li>
+            </ul>
+
+            <h3>3.2 O Processo de Seleção PRISMA</h3>
+            <p>A seleção dos documentos seguiu o protocolo PRISMA (<em>Preferred Reporting Items for Systematic Reviews and Meta-Analyses</em>), estruturado nas seguintes etapas:</p>
+            <ol style="margin-left: 1.5rem; margin-bottom: 1.2rem;">
+                <li><strong>Busca Inicial:</strong> Realizada com o nome da variável, resultando em <strong>79.108 documentos</strong>.</li>
+                <li><strong>Busca Avançada:</strong> Utilização estratégica de operadores booleanos (<em>AND, OR</em>) especificamente para <strong>limitar a seleção</strong> e refinar o universo amostral, resultando em <strong>257 documentos</strong>.</li>
+                <li><strong>Critérios de Inclusão:</strong> Filtros de pertinência temática, tipo de documento (artigos científicos), acesso aberto, idioma espanhol e recorte temporal (2016-2020).</li>
+                <li><strong>Critérios de Exclusão:</strong> Eliminação de duplicatas e triagem qualitativa baseada na avaliação rigorosa de títulos e resumos.</li>
+                <li><strong>Amostra Final:</strong> Consolidação de <strong>30 artigos científicos</strong> que compuseram o corpus analítico.</li>
+            </ol>
+        </section>
+
+        <!-- 4. Análise Detalhada dos 30 Artigos Selecionados -->
+        <section>
+            <h2>4. Análise Detalhada dos 30 Artigos Selecionados</h2>
+            <p>A produção científica foi organizada em categorias temáticas para evidenciar a amplitude do pensamento criativo.</p>
+
+            <h3>4.1 Criatividade, Tecnologia e Ciência (STEAM e Robótica)</h3>
+            <p>Esta categoria explora a intersecção entre inovação tecnológica e potencial humano:</p>
+            <ul>
+                <li><strong>Robótica e Projetos STEAM:</strong> O Artigo 2 (Casado & Checa, 2020) demonstra que o uso da robótica educativa incrementa positivamente a criatividade em salas de aula do ensino primário.</li>
+                <li><strong>Visão Crítica (Technoaldea):</strong> Em contrapartida, o Artigo 1 (Valero, 2020) discute a <em>"Technoaldea"</em>, questionando se o excesso tecnológico pode resultar em uma privação da criatividade inata e natural do ser humano.</li>
+            </ul>
+
+            <h3>4.2 Criatividade nas Disciplinas Curriculares (Matemática, Física e Artes)</h3>
+            <p>A criatividade manifesta-se em diversas taxonomias e domínios do conhecimento:</p>
+            <ul>
+                <li><strong>Taxonomias de Criatividade:</strong> O Artigo 30 (Tristán & Mendoza, 2016) detalha a classificação da criatividade de acordo com o campo predominante, seja ele verbal, matemático ou espacial.</li>
+                <li><strong>Pensamento Matemático:</strong> O Artigo 21 (Araya et al., 2019) destaca que ambientes didáticos específicos podem estimular o pensamento criativo matemático desde o ensino primário.</li>
+                <li><strong>Capacidades Físicas:</strong> O Artigo 4 (Mezcua et al., 2020) traz uma descoberta singular: elevados níveis de resistência cardiorrespiratória em adolescentes estão associados a uma maior capacidade criativa.</li>
+                <li><strong>Educação Artística:</strong> O Artigo 3 (Triviño & Vaquero, 2019) utiliza o fenômeno cultural contemporâneo 'Malamente' para discutir o desenvolvimento do pensamento crítico-creativo-social na formação de professores.</li>
+            </ul>
+
+            <h3>4.3 Estimulantes da Criatividade (Humor, Drama, Jogos e Literatura)</h3>
+            <ul>
+                <li><strong>Humor no Adulto Maior:</strong> O Artigo 10 (Salgado et al., 2017) revela que o sentido do humor é um estímulo vital para a criatividade e manutenção da saúde mental em idosos.</li>
+                <li><strong>Drama e Jogos:</strong> O drama criativo (Artigo 18) e os videogames (Artigo 13) são apontados como ferramentas para a formação cognitiva e estratégica.</li>
+                <li><strong>Literatura Infantil:</strong> O Artigo 28 reforça a arte e a literatura como estratégias para fortalecer habilidades que muitas vezes são consideradas estáticas, mas que são altamente estimuláveis.</li>
+            </ul>
+
+            <h3>4.4 Perspectivas Psicológicas, Sociais e Profissionais</h3>
+            <ul>
+                <li><strong>Violência e Adaptabilidade:</strong> Um achado crítico de Grajales et al. (2019) observa que crianças em contextos de violência intrafamiliar desenvolvem <em>"soluciones violentas pero creativas"</em> para seus conflitos, evidenciando que a criatividade pode ser moldada pelo ambiente hostil.</li>
+                <li><strong>Desenvolvimento Docente:</strong> O Artigo 16 (Blanquiz & Villalobos, 2018) enfatiza que não apenas os alunos, mas os docentes devem desenvolver seu próprio pensamento criativo para mediar a pedagogia de forma eficaz.</li>
+                <li><strong>Aplicação Profissional:</strong> O alcance do tema estende-se à formação de arquitetos (Artigo 19, Navarro, 2020) e ao desenvolvimento de competências para planos de negócio (Artigo 25, J. Hernández & Jimenes, 2018), onde a criatividade é a capacidade de fazer as coisas de forma não semelhante ao que já existe.</li>
+            </ul>
+        </section>
+
+        <!-- 5. Resultados Estatísticos -->
+        <section>
+            <h2>5. Resultados Estatísticos e Produção Científica</h2>
+            <p>A análise da distribuição temporal revela uma trajetória de amadurecimento do campo de estudo:</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ano de Publicação</th>
+                            <th>Número de Artigos</th>
+                            <th>Porcentagem (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2016</td>
+                            <td>1</td>
+                            <td>3,33%</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>7</td>
+                            <td>23,33%</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>6</td>
+                            <td>20,00%</td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>10</td>
+                            <td>33,34%</td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>6</td>
+                            <td>20,00%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>30</strong></td>
+                            <td><strong>100,00%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>O ano de <strong>2019</strong> representa o ápice da produção científica (33,34%). Este surto produtivo, em contraste com o baixo índice de 2016 (3,33%), sugere uma consolidação acadêmica do tema e um aumento da indexação de periódicos regionais em bases como Scopus e SciELO durante este intervalo. O crescimento estável após 2017 demonstra que o pensamento criativo tornou-se um tópico prioritário e perene na agenda de pesquisa educacional.</p>
+        </section>
+
+        <!-- 6. Síntese Transversal -->
+        <section>
+            <h2>6. Síntese Transversal: O que os 30 Estudos Revelam?</h2>
+            <p>A integração dos dados permite as seguintes inferências acadêmicas:</p>
+            <ul>
+                <li><strong>Faculdade Universal:</strong> A criatividade é uma capacidade intrínseca do ser humano, variando apenas em seu nível de desenvolvimento e influência sociocultural.</li>
+                <li><strong>Diferenciação Metodológica:</strong> Para a resolução de problemas, o indivíduo utiliza procedimentos distintos dos rotineiros. O Artigo 26 (Olguín & Tavernini, 2018) destaca a eficácia de modos de pensamento como o <strong>raciocínio por analogia</strong> em comparação ao simples "torvelinho de ideias" (brainstorming).</li>
+                <li><strong>Processo Estruturado:</strong> De acordo com <strong>Zambrano (2019)</strong>, o desenvolvimento criativo não é errático, mas processual, compreendendo quatro etapas fundamentais:
+                    <ul>
+                        <li><strong>Preparação:</strong> Imersão no problema.</li>
+                        <li><strong>Incubação:</strong> Processamento subconsciente.</li>
+                        <li><strong>Iluminação:</strong> O surgimento do <em>insight</em>.</li>
+                        <li><strong>Refinamento:</strong> Validação e ajuste da ideia.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 7. Conclusões -->
+        <section>
+            <h2>7. Conclusões e Considerações Finais</h2>
+            <ul>
+                <li><strong>Dominância Científica:</strong> As bases <strong>SciELO e Scopus</strong> são os principais repositórios de conhecimento sobre o tema, validando a relevância acadêmica do pensamento criativo no eixo global e regional.</li>
+                <li><strong>Gestão da Imaginação:</strong> Conclui-se que o pensamento criativo é a gestão estratégica da imaginação humana para responder aos desafios contextuais da vida.</li>
+                <li><strong>Escola como Laboratório Social:</strong> A instituição educativa é reafirmada como um laboratório social e emocional vital. Através do estímulo à criatividade, a escola atua como agente redutor de desigualdades e brechas de pobreza.</li>
+                <li><strong>Imperativo da Formação:</strong> O avanço científico aponta que o florescimento criativo no estudante é indissociável da criatividade do próprio docente, exigindo uma mediação pedagógica que reconheça necessidades e potências mútuas.</li>
+            </ul>
+        </section>
+
+        <!-- 8. Referências Bibliográficas -->
+        <section>
+            <h2>8. Referências Bibliográficas (Seleção Analítica)</h2>
+            <ul style="list-style-type: none; margin-left: 0;">
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Araya, P., Giaconi, V., & Martínez, M. V. (2019). Pensamiento matemático creativo en aulas de enseñanza primaria: entornos didácticos que posibilitan su desarrollo. <em>Calidad en la Educación</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Blanquiz, Y., & Villalobos, M. (2018). Estrategias de Enseñanza y Creatividad del Docente en el área de Ciencias Sociales de Instituciones Educativas de Media de San Francisco 1. <em>Revista Telos</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Bono, E. (1994). <em>El pensamiento creativo</em>. Ediciones Paidós Ibérica S.A.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Casado, R., & Checa, M. (2020). Robótica y Proyectos STEAM: Desarrollo de la creatividad en las aulas de Educación Primaria. <em>Píxel-BIT. Revista de Medios y Educación</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Ferrater, J. (1964). <em>Diccionario de filosofía</em>. Tomo II.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Grajales, C., et al. (2019). Violencia intrafamiliar y pensamento creativo: factores que inciden en la resolución de conflictos en la infancia. <em>Actualidades Pedagógicas</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Hernández, J., & Jimenes, Y. (2018). Desarrollo de competencias de pensamiento creativo y práctico para iniciar un plan de negocio: diseño de evidencias de aprendizaje. <em>RIDE</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Mezcua, A., et al. (2020). Capacidades físicas y su relação con la memoria, cálculo matemático, razonamiento lingüístico y creatividad en adolescentes. <em>Retos</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Navarro, M. (2020). La creatividad en la formación del arquitecto, el proceso creativo y las neurociencias. <em>RIDE</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Olguín, V., & Tavernini, L. (2018). ¿Torbellino de ideas o razonamiento mediante analogías?: Evaluación de la eficacia de dos modos de pensamiento para promover la creatividad. <em>Subjetividad y Procesos Cognitivos</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Sivera, S. (2016). Genios y botellas: Cómo se imparte pensamiento creativo en la UOC. <em>Revista de Ciencias Humanas y Sociales</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Tristán, A., & Mendoza, L. (2016). Taxonomías sobre creatividad. <em>Revista de Psicología</em>.</li>
+                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem;">Zambrano, N. (2019). El desarrollo de la creatividad en estudiantes universitarios. <em>Conrado</em>. DOI: 10.36737/01230425.v0.n35.2018.1957</li>
+            </ul>
+        </section>
+
+        <!-- Seção de Mídias Complementares -->
+        <div class="media-section">
+            <h2>Recursos Multimídia Complementares</h2>
+            <div class="media-container">
+                
+                <!-- Infográfico -->
+                <div class="media-item">
+                    <h4>Infográfico: Pensamento Criativo no Contexto Educativo</h4>
+                    <img src="https://raw.githubusercontent.com/joaoterena/topico4-criatividade/main/Pensamento_Criativo_no_Contexto_Educativo.png" alt="Infográfico sobre Pensamento Criativo no Contexto Educativo" loading="lazy">
+                </div>
+
+                <!-- Áudio -->
+                <div class="media-item">
+                    <h4>Áudio: Por que a escola mata a criatividade?</h4>
+                    <audio controls>
+                        <source src="https://raw.githubusercontent.com/joaoterena/topico4-criatividade/main/Por_que_a_escola_mata_a_criatividade.m4a" type="audio/mp4">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                </div>
+
+                <!-- Vídeo -->
+                <div class="media-item">
+                    <h4>Vídeo: Como o Ambiente Molda o Pensamento Criativo</h4>
+                    <video controls poster="">
+                        <source src="https://raw.githubusercontent.com/joaoterena/topico4-criatividade/main/Como_o_Ambiente_Molda_o_Pensamento_Criativo.mp4" type="video/mp4">
+                        Seu navegador não suporta a exibição de vídeos.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Conteúdo gerado por IA sob supervisão de <strong>João Pedro Magalhães Terena</strong>.</p>
+    </footer>
+
+</body>
+</html>
